@@ -57,7 +57,7 @@ export class CustomLabelDirective {
       this.htmlElement.nativeElement.innerText = `Mínimo ${current}/${min} caracteres`
     }
     if (errors.includes('email')) {
-      this.htmlElement.nativeElement.innerText = 'No tiene email requerido';
+      this.htmlElement.nativeElement.innerText = 'No tiene formato de correo ';
       return;
     }
 
