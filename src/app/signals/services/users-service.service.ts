@@ -9,15 +9,15 @@ import { SingleUserResponse, User } from '../interfaces/user-request.interface';
 export class UsersServiceService {
 
 
-private http = inject(HttpClient);
-private baseUrl = 'https://reqres.in/api/users'
+  private http = inject(HttpClient);
+  private baseUrl = 'https://reqres.in/api/users'
 
-getUserById( id: number ): Observable<User> {
- return this.http.get<SingleUserResponse>(`${ this.baseUrl }/${ id }`)
- .pipe(
-  map( response => response.data ),
-  tap( console.log )
- )
-}
+  getUserById(id: number): Observable<User> {
+    return this.http.get<SingleUserResponse>(`${this.baseUrl}/${id}`)
+      .pipe(
+        map(response => response.data),
+        tap(console.log)
+      );
+  }
 
 }
